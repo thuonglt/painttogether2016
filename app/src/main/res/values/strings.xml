@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PaintTogether</string>
+    <string name="title_activity_create_project_paint">CreateProjectPaintActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

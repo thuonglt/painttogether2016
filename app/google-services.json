@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1057727490479",
+    "firebase_url": "https://phantom-painttogether.firebaseio.com",
+    "project_id": "phantom-painttogether",
+    "storage_bucket": "phantom-painttogether.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057727490479:android:5f06755c1d4190e5",
+        "android_client_info": {
+          "package_name": "com.phantom.painttogether"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057727490479-gfh3gst3pt4t2cg7nufvv8quvbmu1euc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_KoX3-nx0XOPbaWli_dmdH0heNs8EZQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

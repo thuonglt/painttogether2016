@@ -1,0 +1,121 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.phantom.painttogether.viewmodel.PaintScreenViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D7C1B9"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="10"
+        tools:context="com.phantom.painttogether.view.PaintScreenActivity">
+
+        <com.phantom.painttogether.view.PaintView
+            android:id="@+id/main_paint_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@{viewModel.resIDBackground, default=@drawable/bg_rainbow}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/btn_color1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@{viewModel.resIDColor1, default=@drawable/circle_color1}"
+                android:clickable="@{viewModel.color1Clickable}"
+                android:onClick="@{viewModel::onClickColor1}" />
+
+            <ImageButton
+                android:id="@+id/btn_color2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@{viewModel.resIDColor2, default=@drawable/circle_color2}"
+                android:clickable="@{viewModel.color2Clickable}"
+                android:onClick="@{viewModel::onClickColor2}" />
+
+            <ImageButton
+                android:id="@+id/btn_color3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@{viewModel.resIDColor3, default=@drawable/circle_color3}"
+                android:clickable="@{viewModel.color3Clickable}"
+                android:onClick="@{viewModel::onClickColor3}" />
+
+            <ImageButton
+                android:id="@+id/btn_color4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@{viewModel.resIDColor4, default=@drawable/circle_color4}"
+                android:clickable="@{viewModel.color4Clickable}"
+                android:onClick="@{viewModel::onClickColor4}" />
+
+            <ImageButton
+                android:id="@+id/btn_color5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@{viewModel.resIDColor5, default=@drawable/circle_color5}"
+                android:clickable="@{viewModel.color5Clickable}"
+                android:onClick="@{viewModel::onClickColor5}" />
+
+            <TextView
+                android:id="@+id/text_size_paint"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@{viewModel.seekBarValue}"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/seekbar_size_paint"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:onProgressChanged="@{viewModel::onValueChanged}" />
+
+            <ImageButton
+                android:id="@+id/btn_pen"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_pen"
+                android:clickable="@{viewModel.penClickable}"
+                android:onClick="@{viewModel::onClickPen}" />
+
+            <ImageButton
+                android:id="@+id/btn_eraser"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_eraser"
+                android:clickable="@{viewModel.eraserClickable}"
+                android:onClick="@{viewModel::onClickEraser}" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
